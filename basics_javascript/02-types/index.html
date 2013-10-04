@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>foo</title>
+  	</head>
+  	<body>
+  	<script>
+
+		/**
+		 * trivial types
+		 */
+		var string = "string";
+		var bool = false;
+		var integer = 2;
+		var float = 2.2223232323232323566666666;
+		// note that only 16 fractional digits are available in Javascript
+
+		/**
+		 * non-trivial types
+		 */
+		
+		// arrays
+		var array = new Array();
+		var array2 = [["foo", "baaart"], ["anothere FOO", "bardt"]];
+
+		// objects
+		var obj = new Object();
+		var obj2 = {};
+
+		// functions
+		function foo()
+		{
+		  // do something
+		  console.log("calling foo");
+		}
+
+		var bar = function()
+		{
+		  // so sth. else
+		  console.log("calling \"bar\"");
+
+		  // do something more
+		  
+		  return new Array();
+
+		};
+
+
+		// 1. non trivial types can _not_ be "copied" by variable assignment
+		var array2 = [["foo", "baaart"], ["anothere FOO", "bardt"]];
+		var array2_copy = array2;
+		array2[0] = false;
+		array2_copy; // outputs: [false, Array[2]]
+		
+		// type checking
+		typeof false; // "boolean"
+		typeof null; // "object" (woot?)
+		typeof "foo"; // "string"
+		typeof function(){}; // "function"
+		typeof {}; // "object"
+		typeof array; // "object" (woot?)
+		array instanceof Array; // true !!
+
+		/**
+		 * CALLBACKS
+		 */
+		
+		function foo(param1, myFunction)
+		{
+			console.log('executing foo function');
+			var newParam = param1.toString() + "-test";
+
+			myFunction(newParam);
+		}
+
+		var bar = function(newParam)
+		{
+			console.log('executing bar function');
+			console.log(newParam);
+		}
+
+		// use it
+		foo("mytestvalue", bar);
+
+		// also as anonymous function
+		foo("tobias", function(myParam){ 
+			console.log(myParam);
+		});
+
+
+
+
+  	</script>
+  	</body>
+</html>

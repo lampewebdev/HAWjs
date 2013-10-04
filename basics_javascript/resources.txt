@@ -1,0 +1,11 @@
+Most comprehensive collection on resources:
+http://stackoverflow.com/questions/11246/best-resources-to-learn-javascript
+
+interactive learning
+http://www.codecademy.com/
+
+(advanced) Javascript Design Patterns
+
+http://addyosmani.com/resources/essentialjsdesignpatterns/book/
+
+

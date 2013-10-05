@@ -95,7 +95,7 @@ function fooCounter()
 	// private counter attribute
 	var counter = 0;
 
-	// private functions
+	// public functions returned as object
 	return {
 		inc: function(){
 			counter++;

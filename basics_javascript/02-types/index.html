@@ -7,26 +7,36 @@
   	<body>
   	<script>
 
-		/**
-		 * trivial types
-		 */
+		/////////////////////////////////////////////
+		// trivial types
+		/////////////////////////////////////////////
 		var string = "string";
 		var bool = false;
 		var integer = 2;
 		var float = 2.2223232323232323566666666;
-		// note that only 16 fractional digits are available in Javascript
+		// note that only 16 fractional digits are available
 
-		/**
-		 * non-trivial types
-		 */
+		/////////////////////////////////////////////
+		// non-trivial types
+		/////////////////////////////////////////////
 		
 		// arrays
-		var array = new Array();
+		var array = new Array(); // shorthand: var array = [];
 		var array2 = [["foo", "baaart"], ["anothere FOO", "bardt"]];
 
 		// objects
 		var obj = new Object();
 		var obj2 = {};
+
+		// set a value
+		obj.foo = "asdasd";
+
+		// delete
+		delete obj.foo;
+
+		// access objects
+		obj["foo"]; // returns asdasd
+		obj.foo; // same same
 
 		// functions
 		function foo()
@@ -46,8 +56,9 @@
 
 		};
 
-
+		/////////////////////////////////////////////
 		// 1. non trivial types can _not_ be "copied" by variable assignment
+		/////////////////////////////////////////////
 		var array2 = [["foo", "baaart"], ["anothere FOO", "bardt"]];
 		var array2_copy = array2;
 		array2[0] = false;
@@ -62,9 +73,9 @@
 		typeof array; // "object" (woot?)
 		array instanceof Array; // true !!
 
-		/**
-		 * CALLBACKS
-		 */
+		/////////////////////////////////////////////
+		// CALLBACKS
+		/////////////////////////////////////////////
 		
 		function foo(param1, myFunction)
 		{
@@ -87,9 +98,6 @@
 		foo("tobias", function(myParam){ 
 			console.log(myParam);
 		});
-
-
-
 
   	</script>
   	</body>

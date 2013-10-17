@@ -21,7 +21,7 @@ Counter.prototype.increment = function()
 	return this.counter;
 };
 
-var counter = new Counter();
+//var counter = new Counter();
 
 /////////////////////////////////////////////
 // function inheritance

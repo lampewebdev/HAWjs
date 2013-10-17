@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FOOOOOOO!O!!!!!11111111elf</title>
+</head>
+<body>
+	<script>
+		var counter  = function()
+		{
+			var count = 0;
+
+			return {
+				count: count,
+				increment: function(){
+					return ++count;
+				},
+				decrement: function(){
+					return --count;
+				}
+			};
+		};
+
+		var supercounter = (function()
+		{
+			return counter();
+		}());
+
+	</script>
+</body>
+</html>

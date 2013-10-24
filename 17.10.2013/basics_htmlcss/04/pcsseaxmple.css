@@ -13,7 +13,7 @@ a{
 	text-decoration: none;
 	color:white;
 }
-#info{
+.leftSide{
 	height: 100%;
 	width: 25%;
 	
@@ -27,17 +27,17 @@ a{
 	color: white;
 	font-family: quicksand;
 }
-#info > h1{
+h1{
 	padding-top: 45%;
 
 	margin: 0;
 	
 	font-size: 5em;
 }
-#info > p{
+.leftSide > header > p{
 	font-size: 3em;
 }
-#content{
+.content{
 	display: inline-block;
 	position: absolute;
 	top: 0;
@@ -53,31 +53,28 @@ a{
 	font-family: Aller_Bd;
 	
 }
-#content > article{
+.content > article{
 	padding-top: 5%;
 	padding-left: 5%;
 	padding-right: 5%;
 }
-#content > article > header{
-	margin: 0px;
+h2{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	font-size: 3em;
 	padding-bottom: 5px;
 
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 	border-bottom-color: white;
 }
-h2{
-	margin: 0px;
-	padding: 0px;
-	display: inline-block;
-	font-size: 3em;
-}
-#content > article > header > p{
+.content > article > headerP > p{
 	font-size: 1.4em;
-	padding: 0px;
+	padding: 0;
 	float: right;
 }
-#content > article > p{
+.content > article > p{
 	margin: 0.4em 0;
 	margin-left: 0;
 	padding: 1em;

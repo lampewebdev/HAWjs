@@ -3,8 +3,67 @@
 <head>
 	<meta charset='utf-8'>
 	<title>My First Correct HTML5 Site</title>
+	
+	<script type="text/javascript">
+		
+		var counter = function()
+		{
+			console.log(this);
+			var count = 0;
+			var increment = function()
+			{
+				count++;
+				return count;
+			}
+
+			var decrement = function()
+			{
+				count--;
+				return count;
+			}
+
+			(function(){
+				// init
+			}())
+
+			return {
+				inc: increment
+			}
+		}
+
+		(function(){
+
+
+
+		})()
+
+		var foo = function(param1, param2)
+		{
+			var text = param1 + "-text";
+			param2(text);
+		}
+
+		var bar = function(text)
+		{
+			console.log('BARFN:' + text);
+		}
+
+		foo('OGM', bar);
+
+		foo('TEST', function( text ){
+			console.log(text);
+		})
+
+
+	</script>
 </head>
 <body>
-	
+	<header id="myId">
+		<h1>Hallo Welt</h1>
+		<h1>Hallo Welt</h1>
+	</header>
+	<script>
+
+	</script>
 </body>
 </html>

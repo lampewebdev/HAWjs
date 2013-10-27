@@ -11,6 +11,10 @@ var changeContent = function( newText ){
 	node.innerHTML = newText;
 };
 
+////////////////////////////////////
+// changeColor Handler for #list
+////////////////////////////////////
+
 var changeColor = function(){
 	
 	var list = document.querySelectorAll('#list')[0].childNodes;
@@ -42,6 +46,10 @@ var changeColor = function(){
 	}
 };
 
+////////////////////////////////////
+// TEH list-element race
+// click handler for #list
+////////////////////////////////////
 
 var changeMargin = function(){
 
@@ -101,12 +109,21 @@ var changeMargin = function(){
 };
 
 var myLoopHandler = function(element){
+	// do the same here as in the closure
 	console.log(element);
 };
+
+////////////////////////////////////
+// BUTTON onClick event binding
+////////////////////////////////////
 
 var button = document.querySelector('button');
 
 button.addEventListener('click', changeMargin);
+
+////////////////////////////////////
+// document onScroll event binding
+////////////////////////////////////
 
 document.addEventListener('scroll', function(){
 	console.log('scrolling');

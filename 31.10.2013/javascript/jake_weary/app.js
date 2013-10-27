@@ -2,7 +2,7 @@
 var c = document.getElementById('content');
 
 // change inner html
-//c.innerHTML = "foo";
+c.innerHTML = "SAME H4x0r CHANGeD THE TEXT. LULZ >.<";
 
 var l = document.getElementById('list');
 
@@ -62,8 +62,7 @@ var changeMargin = function(){
 		// margin = parseInt( element.style.marginLeft || margin, 10);
 		// element.style.marginLeft = (margin + 10) + "px";
 		
-		// create closure to have own scope for each Element
-		// for margin and element after loop has finished 
+		// create closure to have own scope for each Element after the loop has finished.
 		(function(element){
 
 			// we need a reference for that interval to clear it later
@@ -89,12 +88,20 @@ var changeMargin = function(){
 				}
 
 				largest.style.backgroundColor = "green";
-			}, 3000);
+			}, 2000);
 
 		}(element));
-		
+
+		// the clean way is to put the function generator outside the loop
+		// because on every iteration this function gets instanciated unneccessarily
+		// this is much cleaner
+		myLoopHandler(element);
 		listLength--;
 	}
+};
+
+var myLoopHandler = function(element){
+	console.log(element);
 };
 
 var button = document.querySelector('button');

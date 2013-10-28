@@ -17,6 +17,8 @@ form.addEventListener('submit', function(event){
 
 	var $username = $('input[name="username"]')[0];
 	var $password = $('input[name="password"]')[0];
+	var $firstname = $('input[name="firstname"]')[0];
+	var $lastname = $('input[name="lastname"]')[0];
 	var $tnbdsb = $('input[name="tnbdsb"]')[0];
 
 	if($username.value && $password.value && $tnbdsb.checked){
@@ -25,7 +27,9 @@ form.addEventListener('submit', function(event){
 	}else{
 		highlightOnError($username.value, $username);
 		highlightOnError($password.value, $password);
-		highlightOnError($tnbdsb.value, $tnbdsb.previousSibling);
+		highlightOnError($firstname.value, $firstname);
+		highlightOnError($lastname.value, $lastname);
+		highlightOnError($tnbdsb.checked, $tnbdsb.previousSibling);
 		event.preventDefault();
 	}
 });
@@ -55,7 +59,7 @@ var elements = $('input[type="text"], input[type="password"]'),
 var validateString = function(string, minLength){
 	minLength = minLength || 2;
 
-	if(string.length <= minLength)
+	if(string.length < minLength)
 	{
 		return false;
 	}else{

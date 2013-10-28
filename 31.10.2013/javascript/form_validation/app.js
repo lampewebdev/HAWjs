@@ -6,6 +6,20 @@ var $ = function(args){
 // or like this
 var _ = document.querySelectorAll.bind(document);
 
+// bubbling
+
+var $textarea = $('textarea')[0];
+
+$textarea.addEventListener('click', function(event){
+	console.log('textarea click');
+	// stop bubbling to prevent the document click event
+	// event.stopPropagation();
+});
+
+document.addEventListener('click', function(event){
+	console.log('document click');
+});
+
 ////////////////////////////////////
 //  Validate on Form submit event
 ////////////////////////////////////
@@ -92,6 +106,6 @@ var onInputKeyup = function(event){
 while(elementsLength > 0)
 {
 	var element = elements[elementsLength - 1];
-	element.addEventListener('keyup', onInputKeyup);
+	element.addEventListener('keydown', onInputKeyup);
 	elementsLength--;
 }

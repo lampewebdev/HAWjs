@@ -1,6 +1,6 @@
 1. Markup + default styles
 2. Query Selector + $ fn
-3. event system 
+3. event system | scroll | bubbling | 
 4. submission event + prevention
 5. this context
 6. get value

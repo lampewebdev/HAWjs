@@ -5,14 +5,14 @@ var $ = function(args){
 
 // or like this
 var _ = document.querySelectorAll.bind(document);
+////////////////////////////////////
+// event bubbling
+////////////////////////////////////
+var $input = $('input')[0];
 
-// bubbling
-
-var $textarea = $('textarea')[0];
-
-$textarea.addEventListener('click', function(event){
-	console.log('textarea click');
-	// stop bubbling to prevent the document click event
+$input.addEventListener('click', function(event){
+	console.log('input click');
+	// stop bubbling to prevent the following document click event
 	// event.stopPropagation();
 });
 

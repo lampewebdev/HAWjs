@@ -1,0 +1,57 @@
+@font-face { font-family: quicksand; src: url('Quicksand-Regular.otf'); } 
+@font-face { font-family: aller; src: url('Aller_Bd.ttf'); }
+html,body{
+	height: 100%;
+	width: 100%;
+	
+	margin: 0;
+	padding: 0;
+	
+	font-size: 100%;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+#left{
+	width: 25%;
+	height: 100%;
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	text-align: center;
+
+	background-color: #E15852;
+	color: white;
+}
+#left a{
+	color:white;
+}
+h1{
+	padding: 0;
+	margin: 0;
+
+	font-size: 4em;
+	font-family: quicksand;
+	margin-top: 50px;
+}
+#content{
+	width: 75%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left:25%;
+
+	padding-left: 20px;
+
+	background-color: #8EECC4;
+	color:white;
+
+	overflow: auto;
+}
+h2{
+	font-size: 2em;
+	font-family: aller;
+}

@@ -4,16 +4,22 @@
 	<meta charset="UTF-8">
 	<title>Form Validation</title>
 	<style>
-		.error{
+		
+		input{
+			border: 1px solid #ccc;
+			outline: none;
+		}
+		input.error, span.error{
 			border: 1px solid red;
 		}
 	</style>
 </head>
 <body>
 	<form action="something.php" method="post">
-	username: <input type="text" name="username" value="">
-	<br/>
-	password: <input type="password" name="password" value=""><br/>
+	firstname: <input type="text" name="firstname"><br>
+	lastname: <input type="text" name="lastname"><br>
+	username: <input type="text"  name="username" value=""><br>
+	password: <input type="password" name="password" value=""><br>
 	<span class="tnbdsbDescription">TNB & DSB</span><input type="checkbox" name="tnbdsb">
 	<br>
     <input type="submit" value="Login">

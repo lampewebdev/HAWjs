@@ -1,0 +1,10 @@
+1. Markup + default styles
+2. Query Selector + $ fn
+3. event system | scroll | bubbling | 
+4. submission event + prevention
+5. this context
+6. get value
+7. set className
+8. Keydown vs. keyup vs. keypress
+9. iterate over inputs and assign keyup handler
+10. validate keyup handler

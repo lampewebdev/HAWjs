@@ -71,7 +71,7 @@ var elements = $('input[type="text"], input[type="password"]'),
 	elementsLength = elements.length;
 
 var validateString = function(string, minLength){
-	minLength = minLength || 2;
+	minLength = minLength || 4;
 
 	if(string.length < minLength)
 	{

@@ -1,0 +1,13 @@
+html,body{
+	height: 100%;
+	width: 100%;
+}	
+#myoutercontainer{ position:relative;
+	height:100%;
+}
+#myinnercontainer{ 
+	position:absolute;
+	top:50%;
+	height:10em;
+	margin-top:-5em
+}

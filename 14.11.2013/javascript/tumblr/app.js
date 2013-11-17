@@ -7,7 +7,11 @@ $.ajax({
 	dataType: "jsonp",
 	url: api_url + "tagged?tag=gif&api_key="+api_key,
 	success: function(data){
-		appendPhotos(data);
+		console.log(data);
+		if(data.meta.status === 200)
+		{
+			appendPhotos(data);
+		}
 	}
 });
 
@@ -16,7 +20,10 @@ function appendPhotos(photos)
 	var html = "";
 
 	photos.response.forEach(function(photo){
-		html += '<img src="'+photo.photos[0].original_size.url+'">';
+		if(photo.photos && photo.photos.length > 0)
+		{
+			html += '<img src="'+photo.photos[0].original_size.url+'">';
+		}
 	});
 
 	$('#photoList').append(html);

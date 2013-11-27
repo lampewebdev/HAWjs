@@ -17,8 +17,8 @@ function mySlideshow( config )
 	this.cfg = config || {};
 	this.wrapperElement = this.cfg.wrapperElement || $('.slideshow');
 	this.viewportElement = this.cfg.viewportElement || this.cfg.wrapperElement.find('.slider');
-	this.leftButton = this.cfg.leftButton || this.wrapperelement.find('.leftBtn');
-	this.rightButton = this.cfg.rightButton || this.wrapperelement.find('.rightBtn');
+	this.leftButton = this.cfg.leftButton || this.wrapperElement.find('.leftBtn');
+	this.rightButton = this.cfg.rightButton || this.wrapperElement.find('.rightBtn');
 	this.transitionTime = this.cfg.transitionTime || 700;
 	this.slideCount = this.viewportElement.children().length;
 	this.slideWidth = this.viewportElement.children().first().width();
@@ -108,3 +108,7 @@ var config = {
 };
 
 var slideshowInstance = new mySlideshow( config );
+
+var slideshowInstance2 = new mySlideshow({
+	wrapperElement: $('.slideshow.second'),
+});

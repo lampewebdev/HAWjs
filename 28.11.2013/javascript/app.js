@@ -19,7 +19,7 @@ function mySlideshow( config )
 	this.viewportElement = this.cfg.viewportElement || this.cfg.wrapperElement.find('.slider');
 	this.leftButton = this.cfg.leftButton || this.wrapperElement.find('.leftBtn');
 	this.rightButton = this.cfg.rightButton || this.wrapperElement.find('.rightBtn');
-	this.transitionTime = this.cfg.transitionTime || 700;
+	this.transitionTime = this.cfg.transitionTime || 400;
 	this.slideCount = this.viewportElement.children().length;
 	this.slideWidth = this.viewportElement.children().first().width();
 	this.isAnimating = false;
@@ -34,43 +34,36 @@ mySlideshow.prototype.setInitialState = function()
 	// the slider element
 	this.viewportElement.css("width", this.slideCount * this.slideWidth +"px");
 	this.viewportElement.css("position", "relative");
-	this.viewportElement.css("right", 0);
+	this.viewportElement.css("left", 0);
 };
 
 mySlideshow.prototype.initBindings = function()
 {
-	this.leftButton.click(this.slideRight.bind(this));
-	this.rightButton.click(this.slideLeft.bind(this));
+	this.leftButton.click(this.slideLeft.bind(this));
+	this.rightButton.click(this.slideRight.bind(this));
 };
 
 mySlideshow.prototype.slideLeft = function()
 {
-	// get current Position
-	var rightValue = parseInt( this.viewportElement.css('right'), 10 );
+	var leftValue = parseInt( this.viewportElement.css('left'), 10 );
 	
-	// if its not the last element...
-	if(rightValue < (this.slideCount - 1) * this.slideWidth  )
+	if(leftValue < 0 )
 	{
-		// ...start animation
-		this.animate( rightValue + 1024 );
+		this.animate( leftValue + this.slideWidth );
 	}
 };
 
 mySlideshow.prototype.slideRight = function()
 {
-	// get current Position
-	var rightValue = parseInt( this.viewportElement.css('right'), 10 );
+	var leftValue = parseInt( this.viewportElement.css('left'), 10 );
 	
-	// if its not the last element...
-	if(rightValue > 0  )
+	if(leftValue > - (this.slideCount - 1) * this.slideWidth  )
 	{
-		// ...start animation
-		this.animate( rightValue - 1024 );
+		this.animate( leftValue - this.slideWidth );
 	}
-	this.animate();
 };
 
-mySlideshow.prototype.animate = function( rightValue )
+mySlideshow.prototype.animate = function( leftValue )
 {
 	// check if we are currently running an animation
 	if( this.isAnimating )
@@ -85,11 +78,11 @@ mySlideshow.prototype.animate = function( rightValue )
 	// javascript timeticker-based animation
 	// 
 	//this.viewportElement.animate({
-	//	right: rightValue + "px",
+	//	left: leftValue + "px",
 	//}, this.transitionTime, this.resetAnimationState.bind(this));
 	
-	this.viewportElement.css('right', rightValue + "px");
-	setTimeout(this.resetAnimationState.bind(this), 1000);
+	this.viewportElement.css('left', leftValue + "px");
+	setTimeout(this.resetAnimationState.bind(this), this.transitionTime);
 };
 
 mySlideshow.prototype.resetAnimationState = function()
@@ -104,7 +97,7 @@ var config = {
 	wrapperElement: $('.slideshow.first'),
 	leftButton: $('.slideshow.first .leftBtn'),
 	rightButton: $('.slideshow.first .rightBtn'),
-	transitionTime: 900
+	transitionTime: 400
 };
 
 var slideshowInstance = new mySlideshow( config );

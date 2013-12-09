@@ -51,7 +51,22 @@ h1{
 
 	overflow: auto;
 }
+
 h2{
+
 	font-size: 2em;
 	font-family: aller;
+	display: inline-block;
+	border-bottom-style:solid;
+	border-bottom-color:white;
+	border-bottom-width: 2px;
+}
+a{
+	border-style: solid;
+	border-width: 2px;
+	border-color: #D6F673;
+	padding: 10px;
+}
+a:hover{
+	background-color: #D6F673;
 }

@@ -2,12 +2,15 @@ html,body{
 	height: 100%;
 	width: 100%;
 }	
-#myoutercontainer{ position:relative;
+#myoutercontainer{ 
+	position:relative;
 	height:100%;
+	background-color: yellow;
 }
 #myinnercontainer{ 
 	position:absolute;
 	top:50%;
 	height:10em;
-	margin-top:-5em
+	margin-top:-5em;
+	background-color: black;
 }

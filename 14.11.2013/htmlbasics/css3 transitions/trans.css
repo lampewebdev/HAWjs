@@ -5,10 +5,12 @@
     width: 100px;
     height: 100px;
     background-color: #0000FF;
-    -moz-transition:width 2s, height 2s, background-color 2s, -moz-transform 2s;
-    -webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s;
-    -o-transition:width 2s, height 2s, background-color 2s, -o-transform 2s;
-    transition:width 2s, height 2s, background-color 2s, transform 2s;
+    /*-moz-transition:width 2s, height 2s, background-color 2s, -moz-transform 2s;*/
+    /*-webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s;*/
+    /*-o-transition:width 2s, height 2s, background-color 2s, -o-transform 2s;*/
+    
+   transition:width 2s, height 2s, background-color 2s, transform 2s;*/
+
 }
 .box:hover {
     background-color: #FFCCCC;
@@ -18,4 +20,9 @@
     -webkit-transform:rotate(180deg);
     -o-transform:rotate(180deg);
     transform:rotate(180deg);
+}
+
+.text{
+    color: black;
+    transition:color 0.5s;
 }
